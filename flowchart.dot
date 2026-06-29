@@ -1,0 +1,47 @@
+digraph "flowchart" {
+rankdir=TB;
+v0 [shape=point,label="",fixedsize=true,width=0.1,xlabel="channel.fromPath"];
+v2 [label="SAMTOOLS_FAIDX"];
+v0 -> v2 [label="ref_ch"];
+
+v1 [shape=point,label="",fixedsize=true,width=0.1,xlabel="channel.fromPath"];
+v3 [label="MINIMAP2_ALIGN"];
+v1 -> v3 [label="reads_ch"];
+
+v2 [label="SAMTOOLS_FAIDX"];
+v6 [label="CLAIR3"];
+v2 -> v6;
+
+v0 [shape=point,label="",fixedsize=true,width=0.1,xlabel="channel.fromPath"];
+v3 [label="MINIMAP2_ALIGN"];
+v0 -> v3 [label="ref_ch"];
+
+v3 [label="MINIMAP2_ALIGN"];
+v4 [label="SAMTOOLS_SORT"];
+v3 -> v4;
+
+v4 [label="SAMTOOLS_SORT"];
+v5 [label="SAMTOOLS_INDEX"];
+v4 -> v5;
+
+v5 [label="SAMTOOLS_INDEX"];
+v6 [label="CLAIR3"];
+v5 -> v6;
+
+v4 [label="SAMTOOLS_SORT"];
+v6 [label="CLAIR3"];
+v4 -> v6 [label="sorted_bam"];
+
+v0 [shape=point,label="",fixedsize=true,width=0.1,xlabel="channel.fromPath"];
+v6 [label="CLAIR3"];
+v0 -> v6 [label="ref_ch"];
+
+v6 [label="CLAIR3"];
+v8 [shape=point];
+v6 -> v8;
+
+v6 [label="CLAIR3"];
+v7 [shape=point];
+v6 -> v7;
+
+}

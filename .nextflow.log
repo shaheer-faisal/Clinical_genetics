@@ -1,0 +1,163 @@
+Jun-23 03:29:04.332 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile test -with-report report.html -with-dag flowchart.png
+Jun-23 03:29:04.393 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.04.4
+Jun-23 03:29:04.412 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/lab/.nextflow/plugins; core-plugins: nf-amazon@3.9.2,nf-azure@1.22.6,nf-cloudcache@0.6.0,nf-codecommit@0.5.3,nf-console@1.3.0,nf-google@1.27.3,nf-k8s@1.5.4,nf-seqera@0.21.0,nf-tower@1.28.1,nf-wave@1.21.0
+Jun-23 03:29:04.441 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jun-23 03:29:04.446 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jun-23 03:29:04.449 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Jun-23 03:29:04.464 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Jun-23 03:29:04.562 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
+Jun-23 03:29:04.575 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jun-23 03:29:04.603 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /mnt/d/workspace/my-rnaseq-pipeline/nextflow.config
+Jun-23 03:29:04.606 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /mnt/d/workspace/my-rnaseq-pipeline/nextflow.config
+Jun-23 03:29:04.611 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Jun-23 03:29:04.627 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test`
+Jun-23 03:29:04.911 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, test]
+Jun-23 03:29:04.931 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jun-23 03:29:04.932 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jun-23 03:29:04.944 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/lab/.nextflow/secrets/store.json
+Jun-23 03:29:04.946 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@6caf7803] - activable => nextflow.secret.LocalSecretsProvider@6caf7803
+Jun-23 03:29:04.957 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [silly_mendel] - revision: 0ae4479052
+Jun-23 03:29:05.023 [main] DEBUG nextflow.Session - Session UUID: 90d57285-418c-4fff-a6ad-a3f8501a4d24
+Jun-23 03:29:05.029 [main] DEBUG nextflow.Session - Run name: silly_mendel
+Jun-23 03:29:05.030 [main] DEBUG nextflow.Session - Executor pool size: 8
+Jun-23 03:29:05.038 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jun-23 03:29:05.044 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jun-23 03:29:05.059 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 26.04.4 build 12445
+  Created: 17-06-2026 16:30 UTC (09:30 PDT)
+  System: Linux 6.6.87.2-microsoft-standard-WSL2
+  Runtime: Groovy 4.0.31 on OpenJDK 64-Bit Server VM 25.0.3+9-2-26.04.2-Ubuntu
+  Encoding: UTF-8 (UTF-8)
+  Process: 9259@DESKTOP-NMKAMTP [127.0.1.1]
+  CPUs: 8 - Mem: 19.5 GB (17.1 GB) - Swap: 8 GB (8 GB)
+Jun-23 03:29:05.100 [main] DEBUG nextflow.Session - Work-dir: /mnt/d/workspace/my-rnaseq-pipeline/work [v9fs]
+Jun-23 03:29:05.102 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /mnt/d/workspace/my-rnaseq-pipeline/bin
+Jun-23 03:29:05.109 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jun-23 03:29:05.121 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jun-23 03:29:05.123 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Jun-23 03:29:05.166 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jun-23 03:29:05.174 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Jun-23 03:29:05.257 [main] DEBUG nextflow.Session - Session start
+Jun-23 03:29:05.265 [main] DEBUG nextflow.Session - Report file already exists: report.html -- enable the 'report.overwrite' option in your config file to overwrite existing files
+nextflow.exception.AbortOperationException: Report file already exists: report.html -- enable the 'report.overwrite' option in your config file to overwrite existing files
+	at nextflow.trace.ReportObserver.onFlowCreate(ReportObserver.groovy:119)
+	at nextflow.Session$_notifyFlowCreate_lambda33.doCall(Session.groovy:1079)
+	at nextflow.Session.notifyEvent(Session.groovy:1123)
+	at nextflow.Session.notifyFlowCreate(Session.groovy:1079)
+	at nextflow.Session.start(Session.groovy:606)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:122)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:442)
+	at nextflow.cli.Launcher.run(Launcher.groovy:526)
+	at nextflow.cli.Launcher.main(Launcher.groovy:686)
+Jun-23 03:29:05.269 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Jun-23 03:29:05.681 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jun-23 03:29:05.798 [main] INFO  nextflow.Nextflow -   M Y - R N A S E Q - N F   P I P E L I N E
+  ==========================================
+  reference: /mnt/d/workspace/my-rnaseq-pipeline/data/reference.fa
+  reads    : /mnt/d/workspace/my-rnaseq-pipeline/data/HUCR38.fastq
+  sample   : sample1
+  outdir   : /mnt/d/workspace/my-rnaseq-pipeline/results
+
+Jun-23 03:29:05.840 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jun-23 03:29:05.840 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-23 03:29:05.847 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jun-23 03:29:05.854 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=19.5 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Jun-23 03:29:05.856 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jun-23 03:29:05.883 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SAMTOOLS_FAIDX': maxForks=0; fair=false; array=0
+Jun-23 03:29:05.919 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jun-23 03:29:05.920 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-23 03:29:05.921 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MINIMAP2_ALIGN': maxForks=0; fair=false; array=0
+Jun-23 03:29:05.925 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jun-23 03:29:05.925 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-23 03:29:05.926 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SAMTOOLS_SORT': maxForks=0; fair=false; array=0
+Jun-23 03:29:05.929 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jun-23 03:29:05.929 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-23 03:29:05.930 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SAMTOOLS_INDEX': maxForks=0; fair=false; array=0
+Jun-23 03:29:05.934 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jun-23 03:29:05.935 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-23 03:29:05.936 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'CLAIR3': maxForks=0; fair=false; array=0
+Jun-23 03:29:05.939 [main] DEBUG nextflow.Session - Process names: SAMTOOLS_SORT, CLAIR3, MINIMAP2_ALIGN, SAMTOOLS_FAIDX, SAMTOOLS_INDEX
+Jun-23 03:29:05.941 [main] DEBUG nextflow.Session - Igniting dataflow network (7)
+Jun-23 03:29:05.946 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SAMTOOLS_FAIDX
+Jun-23 03:29:05.947 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MINIMAP2_ALIGN
+Jun-23 03:29:05.948 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SAMTOOLS_SORT
+Jun-23 03:29:05.948 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SAMTOOLS_INDEX
+Jun-23 03:29:05.949 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CLAIR3
+Jun-23 03:29:05.950 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  _nf_script_5c7fb78e40416be8: /mnt/d/workspace/my-rnaseq-pipeline/modules/sort.nf
+  _nf_script_e4e60488579fe366: /mnt/d/workspace/my-rnaseq-pipeline/modules/variant.nf
+  Main: /mnt/d/workspace/my-rnaseq-pipeline/main.nf
+  _nf_script_cb77c27a1096b5ed: /mnt/d/workspace/my-rnaseq-pipeline/modules/align.nf
+  _nf_script_e5e028cabd0c94da: /mnt/d/workspace/my-rnaseq-pipeline/modules/index.nf
+Jun-23 03:29:05.953 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jun-23 03:29:05.954 [main] DEBUG nextflow.Session - Session await
+Jun-23 03:29:06.121 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-23 03:29:06.124 [Task submitter] INFO  nextflow.Session - [6b/f91442] Submitted process > SAMTOOLS_FAIDX (1)
+Jun-23 03:29:26.818 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: SAMTOOLS_FAIDX (1); status: COMPLETED; exit: 0; error: -; workDir: /mnt/d/workspace/my-rnaseq-pipeline/work/6b/f9144200756a282335675dfbcbef14]
+Jun-23 03:29:26.820 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jun-23 03:29:26.844 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-23 03:29:26.845 [Task submitter] INFO  nextflow.Session - [66/4e209a] Submitted process > MINIMAP2_ALIGN (1)
+Jun-23 03:34:06.172 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: MINIMAP2_ALIGN (1); status: RUNNING; exit: -; error: -; workDir: /mnt/d/workspace/my-rnaseq-pipeline/work/66/4e209ad8501c61a18ca62ca72ac252]
+Jun-23 03:34:54.798 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: MINIMAP2_ALIGN (1); status: COMPLETED; exit: 0; error: -; workDir: /mnt/d/workspace/my-rnaseq-pipeline/work/66/4e209ad8501c61a18ca62ca72ac252]
+Jun-23 03:34:55.747 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-23 03:34:55.750 [Task submitter] INFO  nextflow.Session - [b4/7cf211] Submitted process > SAMTOOLS_SORT (1)
+Jun-23 03:35:37.349 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: SAMTOOLS_SORT (1); status: COMPLETED; exit: 0; error: -; workDir: /mnt/d/workspace/my-rnaseq-pipeline/work/b4/7cf2115ed2bdfbab7ed01b149a17cd]
+Jun-23 03:35:37.526 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-23 03:35:37.528 [Task submitter] INFO  nextflow.Session - [77/c5c8a6] Submitted process > SAMTOOLS_INDEX (1)
+Jun-23 03:36:03.382 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: SAMTOOLS_INDEX (1); status: COMPLETED; exit: 0; error: -; workDir: /mnt/d/workspace/my-rnaseq-pipeline/work/77/c5c8a6fd89f4de736e954b4275fc68]
+Jun-23 03:36:03.470 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-23 03:36:03.471 [Task submitter] INFO  nextflow.Session - [92/ae4299] Submitted process > CLAIR3 (1)
+Jun-23 03:39:06.008 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CLAIR3 (1); status: RUNNING; exit: -; error: -; workDir: /mnt/d/workspace/my-rnaseq-pipeline/work/92/ae4299a295554104580865e257996c]
+Jun-23 03:44:06.040 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CLAIR3 (1); status: RUNNING; exit: -; error: -; workDir: /mnt/d/workspace/my-rnaseq-pipeline/work/92/ae4299a295554104580865e257996c]
+Jun-23 03:49:06.057 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CLAIR3 (1); status: RUNNING; exit: -; error: -; workDir: /mnt/d/workspace/my-rnaseq-pipeline/work/92/ae4299a295554104580865e257996c]
+Jun-23 03:54:06.068 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CLAIR3 (1); status: RUNNING; exit: -; error: -; workDir: /mnt/d/workspace/my-rnaseq-pipeline/work/92/ae4299a295554104580865e257996c]
+Jun-23 03:59:06.091 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CLAIR3 (1); status: RUNNING; exit: -; error: -; workDir: /mnt/d/workspace/my-rnaseq-pipeline/work/92/ae4299a295554104580865e257996c]
+Jun-23 04:04:06.121 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CLAIR3 (1); status: RUNNING; exit: -; error: -; workDir: /mnt/d/workspace/my-rnaseq-pipeline/work/92/ae4299a295554104580865e257996c]
+Jun-23 04:09:06.165 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: CLAIR3 (1); status: RUNNING; exit: -; error: -; workDir: /mnt/d/workspace/my-rnaseq-pipeline/work/92/ae4299a295554104580865e257996c]
+Jun-23 04:12:33.958 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: CLAIR3 (1); status: COMPLETED; exit: 0; error: -; workDir: /mnt/d/workspace/my-rnaseq-pipeline/work/92/ae4299a295554104580865e257996c]
+Jun-23 04:12:34.034 [TaskFinalizer-5] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jun-23 04:12:34.038 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jun-23 04:12:34.055 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jun-23 04:12:34.055 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jun-23 04:12:34.077 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Jun-23 04:12:34.207 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Jun-23 04:12:34.240 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=5; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=5h 37m 36s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=8; peakMemory=16 GB; ]
+Jun-23 04:12:34.480 [main] WARN  nextflow.dag.GraphvizRenderer - Graphviz is required to render the execution DAG in the given format -- See http://www.graphviz.org for more info.
+Jun-23 04:12:34.481 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Jun-23 04:12:35.139 [main] WARN  nextflow.trace.ReportObserver - Failed to render execution report -- see the log file for details
+nextflow.exception.AbortOperationException: Report file already exists: report.html -- enable the 'report.overwrite' option in your config file to overwrite existing files
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:66)
+	at nextflow.trace.ReportObserver.renderHtml(ReportObserver.groovy:243)
+	at nextflow.trace.ReportObserver.onFlowComplete(ReportObserver.groovy:129)
+	at nextflow.Session$_notifyFlowComplete_lambda38.doCall(Session.groovy:1093)
+	at nextflow.Session.notifyEvent(Session.groovy:1123)
+	at nextflow.Session.notifyFlowComplete(Session.groovy:1093)
+	at nextflow.Session.shutdown0(Session.groovy:775)
+	at nextflow.Session.destroy(Session.groovy:720)
+	at nextflow.script.ScriptRunner.shutdown(ScriptRunner.groovy:244)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:136)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:442)
+	at nextflow.cli.Launcher.run(Launcher.groovy:526)
+	at nextflow.cli.Launcher.main(Launcher.groovy:686)
+Caused by: java.nio.file.FileAlreadyExistsException: report.html
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:94)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:213)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:244)
+	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:426)
+	at java.base/java.nio.file.Files.newOutputStream(Files.java:215)
+	at java.base/java.nio.file.Files.newBufferedWriter(Files.java:2725)
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:63)
+	... 12 common frames omitted
+Jun-23 04:12:35.175 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jun-23 04:12:35.208 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Jun-23 04:12:35.209 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
