@@ -1,1 +1,0 @@
-# Clinical_genetics
