@@ -1,8 +1,7 @@
 #!/usr/bin/env nextflow
 
 /*
- * My Custom RNA-Seq / Variant Calling Pipeline
- * Inspired by nextflow-io/rnaseq-nf
+ * HiFi Variant Calling Pipeline
  * Uses: minimap2 + samtools + Clair3
  */
 
@@ -13,7 +12,7 @@ params.outdir = "${launchDir}/results"
 
 // Singularity containers
 params.sif_minimap2 = "${projectDir}/containers/minimap2.sif"
-params.sif_samtools = "${projectDir}/containers/minimap2.sif"
+params.sif_samtools = "${projectDir}/containers/samtools.sif"
 params.sif_clair3 = "${projectDir}/containers/clair3.sif"
 params.model_path = "/opt/models/hifi"
 
