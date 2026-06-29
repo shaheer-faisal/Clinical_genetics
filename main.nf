@@ -26,8 +26,8 @@ include { CLAIR3 } from './modules/variant'
 workflow {
     main:
     log.info """\
-      M Y - R N A S E Q - N F   P I P E L I N E
-      ==========================================
+      H I F I   V A R I A N T   C A L L I N G   P I P E L I N E
+      ============================================================
       reference: ${params.reference}
       reads    : ${params.reads}
       sample   : ${params.sample}
