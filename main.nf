@@ -3,7 +3,7 @@
 /*
  * HiFi Variant Calling Pipeline
  * Uses: minimap2 + samtools + Clair3
- */
+*/
 
 params.reads = null
 params.reference = null
